@@ -1,0 +1,9 @@
+
+public class CustomerCheckManager implements ICustomerCheckServices {
+
+	@Override
+	public void checkIfRealPerson(Customer customer) {
+		
+	}
+
+}

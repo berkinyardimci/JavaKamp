@@ -1,0 +1,23 @@
+
+public abstract class BaseUserManager implements IUserServices{
+	
+	@Override
+	public void register(User user) {
+		System.out.println("Kayýt Baþarýlý : " + user.getFirstName() +" " + user.getLastName());
+		
+	}
+	
+	@Override
+	public void delete(User user) {
+		System.out.println( user.getFirstName() + " Adlý kullanýcý silindi " );
+		
+	}
+	
+	@Override
+	public void update(String firstName, User user) {
+		user.setFirstName(firstName);
+		System.out.println( user.getFirstName() + " Adlý kullanýcý Güncellendi " );
+		
+	}
+	
+}

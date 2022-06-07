@@ -1,0 +1,5 @@
+package nLayeredHW.core;
+
+public class AuthenticationService {
+	void register(String name,String surname, String password, String email);
+}

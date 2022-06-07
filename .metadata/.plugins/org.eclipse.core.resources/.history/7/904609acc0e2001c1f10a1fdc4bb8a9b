@@ -1,0 +1,4 @@
+
+public class CampaignServices {
+	void buy(User user, Games game);
+}

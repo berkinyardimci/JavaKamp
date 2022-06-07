@@ -1,0 +1,7 @@
+package nLayeredHW.googleAuthentication;
+
+public class GoogleAuthenticationManager {
+	public void register() {
+		
+	}
+}

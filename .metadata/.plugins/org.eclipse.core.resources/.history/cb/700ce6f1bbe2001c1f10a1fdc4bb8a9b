@@ -1,0 +1,20 @@
+
+public abstract class BaseUserManager implements IUserServices{
+	@Override
+	public void register(User user) {
+		System.out.println("Kayýt Baþarýlý : " + user.getFirstName() +" " + user.getLastName());
+		
+	}
+	
+	@Override
+	public void delete(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void update(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+}

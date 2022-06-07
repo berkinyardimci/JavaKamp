@@ -1,0 +1,21 @@
+
+public class StarbucksCustomerManager extends BaseCustomerManager {
+	
+	
+	ICustomerCheckServices customerCheckService;
+	
+	public StarbucksCustomerManager(ICustomerCheckServices customerCheckService) {
+		this.customerCheckService = customerCheckService;
+	}
+
+	@Override
+	public void save(Customer customer) {
+		
+		checkIfRealPerson(customer);
+		super.save();
+	}
+
+	private void checkIfRealPerson(Customer customer) {
+		
+	}
+}

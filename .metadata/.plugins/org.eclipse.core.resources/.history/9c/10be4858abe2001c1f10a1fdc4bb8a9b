@@ -1,0 +1,5 @@
+
+public interface ICustomerCheckServices {
+	
+	 void checkIfRealPerson(Customer customer);
+}

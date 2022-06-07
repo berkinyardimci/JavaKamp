@@ -1,0 +1,13 @@
+package nLayeredHW;
+
+import nLayeredHW.business.concretes.UserManager;
+import nLayeredHW.dataAccess.concretes.MongoDbUserDao;
+import nLayeredHW.entities.concretes.User;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+	}
+
+}

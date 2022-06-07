@@ -1,0 +1,32 @@
+package nLayeredHW.dataAccess.concretes;
+
+import nLayeredHW.dataAccess.abstracts.UserDao;
+import nLayeredHW.entities.concretes.User;
+
+public class MongoDbUserDao implements UserDao{
+
+	@Override
+	public void create(User user) {
+		System.out.println(user.getName()+ " Ýsimli kullancý mongoDb veri tabanýna eklend");
+		
+	}
+
+	@Override
+	public void update(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User emailAndPassword(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

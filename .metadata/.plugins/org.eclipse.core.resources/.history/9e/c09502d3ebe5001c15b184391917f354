@@ -1,0 +1,14 @@
+package nLayeredHW.business.abstracts;
+
+import nLayeredHW.entities.concretes.User;
+
+public interface ValidationService {
+	boolean validate(User user);
+	
+	void validatePassword(User user);
+	
+	void validateEmail(User user);
+	
+	void ValidateNameAndSurname(User user);
+	
+}

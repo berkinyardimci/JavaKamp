@@ -1,0 +1,5 @@
+package nLayeredDemo.dataAccess.abstaracts;
+
+public interface ProductDao {
+
+}

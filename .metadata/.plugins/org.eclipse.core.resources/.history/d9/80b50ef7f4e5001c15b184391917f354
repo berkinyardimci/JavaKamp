@@ -1,0 +1,42 @@
+package nLayeredHW;
+
+import nLayeredHW.business.abstracts.UserService;
+import nLayeredHW.business.concretes.AuthenticationManager;
+import nLayeredHW.business.concretes.EmailSendManager;
+import nLayeredHW.business.concretes.UserManager;
+import nLayeredHW.business.concretes.ValidationManager;
+import nLayeredHW.core.AuthenticationService;
+import nLayeredHW.core.GoogleAuthentitcationAdapter;
+import nLayeredHW.dataAccess.concretes.MongoDbUserDao;
+import nLayeredHW.entities.concretes.User;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		User u1 = new User("a@gmail.com","55111115","dsasadas","Yardýmcý");
+		
+		UserService userService = new UserManager(new MongoDbUserDao());
+		userService.getAll();
+		
+		AuthenticationService authenticationService = new AuthenticationManager(
+																				new ValidationManager(),
+																				userService,
+																				new EmailSendManager());
+		
+		authenticationService.register("Ahmet", "berkin@gmail.com", "123456", "Yardýmcý");
+		authenticationService.register("Berkin", "@gmail.com", "123456", "Yardýmcý"); //e mailde hata alýr
+		authenticationService.register("B", "@gmail.com", "123456", "Yardýmcý"); // name alanýndan hata alýr
+		System.out.println("*****");
+		authenticationService.logIn("berkin@gmail.com", "123456");
+		
+		
+		AuthenticationService googleAuthenticationService = new GoogleAuthentitcationAdapter(new EmailSendManager());
+		googleAuthenticationService.register("Berkin", "berkin@gmail.com", "123456", "Yardýmcý");
+		googleAuthenticationService.logIn("berkin", "123456");
+		
+		System.out.println(userService.getAll());
+
+}
+}

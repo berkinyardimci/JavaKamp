@@ -1,0 +1,23 @@
+package nLayeredHW.core;
+
+import nLayeredHW.googleAuthentication.GoogleAuthenticationManager;
+
+public class GoogleAuthentitcationAdapter implements AuthenticationService {
+	
+
+
+	@Override
+	public void register(String name, String email, String password, String surname) {
+		GoogleAuthenticationManager googleAuthenticationManager=new GoogleAuthenticationManager();
+		googleAuthenticationManager.registerTo(email, password);
+		
+	}
+
+	@Override
+	public void logIn(String email, String password) {
+		GoogleAuthenticationManager googleAuthenticationManager=new GoogleAuthenticationManager();
+		googleAuthenticationManager.logInTo(email, password);
+		
+	}
+
+}

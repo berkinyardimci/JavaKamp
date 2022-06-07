@@ -1,0 +1,44 @@
+package nLayeredHW.business.concretes;
+
+import nLayeredHW.business.abstracts.ValidationService;
+import nLayeredHW.entities.concretes.User;
+
+public class ValidationManager implements ValidationService{
+
+	
+	boolean validate = false;
+	
+	@Override
+	public boolean validate(User user) {
+		return validate;
+			
+	}
+
+	@Override
+	public boolean validatePassword(User user) {
+		
+		if(user.getPassword().length() >= 6) {
+			validate = true;
+		}else {
+			validate = false;
+		}
+		return validate;
+		
+		
+		
+	}
+
+	@Override
+	public boolean validateEmail(User user) {
+		return validate;
+		
+		
+	}
+
+	@Override
+	public boolean ValidateNameAndSurname(User user) {
+		return validate;
+		
+	}
+
+}

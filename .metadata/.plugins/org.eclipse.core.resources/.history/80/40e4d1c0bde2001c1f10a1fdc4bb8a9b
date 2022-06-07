@@ -1,0 +1,16 @@
+
+public class Games {
+	
+	private String gameName;
+	private String type;
+	
+	
+	public String getGameName() {
+		return gameName;
+	}
+	public String getType() {
+		return type;
+	}
+	
+
+}

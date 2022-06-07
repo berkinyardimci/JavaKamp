@@ -1,0 +1,23 @@
+package nLayeredHW;
+
+import nLayeredHW.business.concretes.UserManager;
+import nLayeredHW.dataAccess.concretes.MongoDbUserDao;
+import nLayeredHW.entities.concretes.User;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		User user1 = new User("berkin@gmail","123456","Burak","Boz");
+		User user2 = new User("mehmet@gmail","2222","Berkin","ahmet");
+		UserManager usermanager = new UserManager(new MongoDbUserDao());
+		
+		usermanager.create(user1);
+		usermanager.create(user2);
+		System.out.println(usermanager.emailAndPassword("mehmet@gmail", "2222"));
+		
+		usermanager.delete(user1);
+		usermanager.getAll();
+	}
+
+}

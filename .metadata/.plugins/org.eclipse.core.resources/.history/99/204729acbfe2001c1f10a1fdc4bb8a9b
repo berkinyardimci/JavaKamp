@@ -1,0 +1,8 @@
+
+public class Campaign1 extends BaseUserManager {
+	@Override
+	public void buy(User user, Games game) {
+		// TODO Auto-generated method stub
+		super.buy(user, game);
+	}
+}

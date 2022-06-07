@@ -1,0 +1,17 @@
+package nLayeredHW;
+
+import nLayeredHW.business.concretes.ValidationManager;
+import nLayeredHW.entities.concretes.User;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		User u1 = new User("berkin@gmail.com","123456","berkin","Yardýmcý");
+		
+		ValidationManager validation = new ValidationManager();
+		
+		validation.validateEmail(u1);
+	}
+
+}

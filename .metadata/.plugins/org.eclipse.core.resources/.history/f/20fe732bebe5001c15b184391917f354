@@ -1,0 +1,5 @@
+package nLayeredHW.business.abstracts;
+
+public interface EmailVerificationService {
+
+}

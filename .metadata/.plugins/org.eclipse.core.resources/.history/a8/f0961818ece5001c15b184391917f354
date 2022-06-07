@@ -1,0 +1,5 @@
+package nLayeredHW.business.concretes;
+
+public class ValidationManager {
+
+}

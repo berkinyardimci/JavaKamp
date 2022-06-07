@@ -1,0 +1,8 @@
+
+public class Main {
+	public static void main(String[] args) {
+		BaseCustomerManager customerManager = new StarbucksCustomerManager(new MernisServicesAdaptor());
+		customerManager.save(new Customer(1,"Engin","Demiroð",15,"1555"));
+		System.out.println();
+	}
+}

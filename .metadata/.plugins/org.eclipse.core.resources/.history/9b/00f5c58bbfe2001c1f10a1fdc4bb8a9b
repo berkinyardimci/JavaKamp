@@ -1,0 +1,12 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		User user = new User("Berkin","Yardımcı",1998,"55555");
+		
+		BaseUserManager baseUserManager = new Campaign1();
+
+	}
+
+}

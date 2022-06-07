@@ -1,0 +1,6 @@
+import java.rmi.RemoteException;
+
+public interface ICustomerCheckServices {
+	
+	 boolean checkIfRealPerson(Customer customer) throws NumberFormatException, RemoteException;
+}

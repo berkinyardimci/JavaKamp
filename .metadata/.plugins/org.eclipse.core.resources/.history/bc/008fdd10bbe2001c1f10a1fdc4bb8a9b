@@ -1,0 +1,16 @@
+
+public class User implements IEntity{
+
+	String firstName;
+	String lastName;
+	int dateOfBirth;
+	String tcKimlikNo;
+	
+	
+	public User(String firstName, String lastName, int dateOfBirth, String tcKimlikNo) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirth = dateOfBirth;
+		this.tcKimlikNo = tcKimlikNo;
+	}
+}

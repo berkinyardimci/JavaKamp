@@ -1,0 +1,7 @@
+package nLayeredHW.entities.concretes;
+
+import nLayeredHW.entities.abstracts.Entity;
+
+public class User implements Entity{
+
+}

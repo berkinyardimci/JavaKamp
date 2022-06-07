@@ -1,0 +1,14 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		User user = new User("Berkin","Yardımcı",1998,"55555");
+		
+		CampaignManager campaignManager = new Campaign1();
+		campaignManager.buy(user, new Games("Gta","Dovus"));
+		System.out.println();
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package nLayeredDemo.dataAccess.concretes;
+
+import nLayeredDemo.dataAccess.abstaracts.ProductDao;
+
+// Veri tabanýyla iletiþim kuran java yapýsý
+
+public class HibernateProductDao implements ProductDao {
+
+}

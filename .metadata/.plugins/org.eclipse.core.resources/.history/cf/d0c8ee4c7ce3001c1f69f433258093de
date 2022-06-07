@@ -1,0 +1,5 @@
+package nLayeredHW.entities.concretes;
+
+public class User {
+
+}

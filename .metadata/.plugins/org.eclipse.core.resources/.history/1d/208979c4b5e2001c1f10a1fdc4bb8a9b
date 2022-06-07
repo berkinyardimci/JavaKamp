@@ -1,0 +1,17 @@
+import java.rmi.RemoteException;
+
+import tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy;
+
+public class MernisServicesAdaptor implements ICustomerCheckServices{
+
+	@Override
+	public boolean checkIfRealPerson(Customer customer) throws NumberFormatException, RemoteException {
+		// TODO Auto-generated method stub
+		KPSPublicSoapProxy client = new KPSPublicSoapProxy();
+		boolean result = client.TCKimlikNoDogrula(Long.parseLong(customer.nationalityId), customer.firstName.toUpperCase(),
+				customer.lastName.toUpperCase(),
+				customer.dateOfBirth);
+		return result;
+	}
+
+}

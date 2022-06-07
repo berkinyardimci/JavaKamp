@@ -1,0 +1,4 @@
+
+public interface IUserServices {
+	void register(Customer customer);
+}

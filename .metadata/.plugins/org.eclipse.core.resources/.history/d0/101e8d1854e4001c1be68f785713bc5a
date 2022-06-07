@@ -1,0 +1,55 @@
+package nLayeredHW.dataAccess.concretes;
+
+import java.util.List;
+import java.util.ArrayList;
+
+import nLayeredHW.dataAccess.abstracts.UserDao;
+import nLayeredHW.entities.concretes.User;
+
+public class MongoDbUserDao implements UserDao{
+	
+	List<User> users = new ArrayList<User>();
+	
+	@Override
+	public void create(User user) {
+		System.out.println(user.getName()+ " Ýsimli kullancý mongoDb veri tabanýna eklend");
+		
+	}
+
+	@Override
+	public void update(User user) {
+		User currentUser = getById(user.getId());
+		
+	}
+
+	@Override
+	public void delete(User user) {
+		
+		
+	}
+
+	@Override
+	public User emailAndPassword(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getById(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getById(int id) {
+		for(User user: users) {
+			if(user.getId() ==id) {
+				return user;
+			
+	}
+		}return null;
+	}
+
+
+	
+}

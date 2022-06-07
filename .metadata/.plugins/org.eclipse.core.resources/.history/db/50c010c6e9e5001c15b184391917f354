@@ -1,0 +1,13 @@
+package nLayeredHW.googleAuthentication;
+
+public class GoogleAuthenticationManager {
+	
+	
+	public void register(String email, String password) {
+		System.out.println("Google ile Kayýt olundu");
+	}
+	
+	public void logIn(String email, String password) {
+		System.out.println("Google ile Giriþ Yapýldý");
+	}
+}
